@@ -25,7 +25,7 @@ func rankPhrases(inputFile string) ([]rank.SingleWord, error) {
 		return nil, fmt.Errorf("Error ioutil.ReadAll: %s", err)
 	}
 
-	// processing the ranking 
+	// processing the ranking
 	tr := textrank.NewTextRank()
 	tr.Populate(string(readBytes), textrank.NewDefaultLanguage(), textrank.NewDefaultRule())
 	tr.Ranking(textrank.NewChainAlgorithm())

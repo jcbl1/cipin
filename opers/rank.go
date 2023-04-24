@@ -93,7 +93,9 @@ LOOP:
 		rankedWords = append(rankedWords, rank.SingleWord{Word: k, Qty: v})
 	}
 
-	// TODO: rankedWords aren't sorted yet!!!
+	sort.Slice(rankedWords, func(i, j int) bool {
+		return rankedWords[i].Qty > rankedWords[j].Qty
+	})
 
 	return rankedWords, nil
 }
