@@ -3,6 +3,7 @@ module github.com/jcbl1/cipin
 go 1.20
 
 require (
+	github.com/DavidBelicza/TextRank/v2 v2.1.3
 	github.com/spf13/cobra v1.7.0
 	github.com/xuri/excelize/v2 v2.7.1
 )
